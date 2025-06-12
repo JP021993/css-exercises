@@ -1,0 +1,27 @@
+/* odd number stylings */
+
+p {
+    background-color: #FF8886;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+/* id=two stylings */
+
+#two {
+    color:#4B9CD3;
+    font-size: 36px;
+}
+
+/* class three styling */
+
+.three {
+    font-size: 24px;
+}
+
+/* id=four stylings */
+
+div#four{
+    background-color: #69BE28;
+    font-size: 24px;
+    font-weight: bold;
+}

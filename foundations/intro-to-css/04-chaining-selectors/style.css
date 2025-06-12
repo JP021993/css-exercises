@@ -1,1 +1,15 @@
-/* Add CSS Styling */
+/* Avatar, proportioned shared
+stylings */
+
+.avatar.proportioned {
+    height:auto;
+    width: 300px;
+}
+
+/* Avatar, distorted shared
+stylings */
+
+.avatar.distorted {
+    height:400px;
+    width: 200px;
+}

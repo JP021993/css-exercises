@@ -1,0 +1,20 @@
+/* shared stylings */
+
+.one,
+.two {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+/* element one stylings*/
+
+.one {
+    background-color: black;
+    color: white;
+}
+
+/* element two stylings*/
+
+.two {
+    background-color: yellow;
+}
