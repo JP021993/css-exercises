@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +18,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px;
 }
 
 input {
@@ -23,4 +26,64 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* put content section in the middle of the page,
+put input and text elements underneath the logo, and made the 
+content section stretch the length of the entire page so header
+and footer would be at the bottom & top of the page */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* spacing between input, button, and logo elements */
+
+.content > * {
+  margin: 8px;
+}
+
+/* spreading header & footer list elements across top & bottom of page */
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+/* making footer background color light gray */
+
+.footer {
+  background-color: #eeeeee;
+}
+
+/* making header & footer elements sit side-by-side 
+plus putting space between individual list items */
+
+.left-links,
+.right-links {
+  display: flex;
+  gap: 16px;
+}
+
+/* removing bullet points, padding, and margin from list items.
+this made the list items sit snuggly in their flex boxes instead
+of being placed towards the right due to padding & margin space. */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* removing underline from list text */ 
+
+a {
+  text-decoration: none;
+  color: gray;
 }
