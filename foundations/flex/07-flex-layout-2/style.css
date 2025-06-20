@@ -2,28 +2,93 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  /*elements need to be able to be laid out side-by-side so I'm changing the layout to flex*/
+  display: flex;
+  /*likely need to do this to push the footer to the bottom of the page and get the rest of the elements to be flexible*/
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /* everything below is included as part of the assignment */
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  /*horizontally and vertically aligning the footer*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  /* need these this property so the sidebar doesn't shrink */
+  flex-shrink: 0;
+  /* making the link font 24px */
+  font-size: 24px;
+}
+
+/* removing underlines from list items */
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* adding margin between list items, but not adding margin to the top
+list item*/
+
+li + li {
+  margin-top: 16px;
+}
+
+/* removing bullet points from list items, adding 16px padding & removing margin*/
+
+ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  /* will this get my cards to wrap correctly below?*/
+  display: flex;
+  flex: 1 1 300px;
+}
+
+.container {
+  /* lays out the sidebar and cards side-by-side */
+  display: flex;
+  /* makes the sidebar & card section stretch the entire page */
+  flex: 1 0 auto;
+}
+
+/* think I need this for the cards to reach the bottom and wrapping */
+
+.card-container {
+  /* this is to get the entire card container to stretch the length of the page
+  and be placed horizontally */
+  display: flex;
+  /* this is to put horizontal space between the cards*/
+  gap: 16px;
+  /* this is to give the cards 48px padding around their section */
+  padding: 48px;
+  /* think this would allow the cards to grow the full length 
+  of the first line then wrap to the next line*/
+  flex-wrap: wrap;
 }
